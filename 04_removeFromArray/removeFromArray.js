@@ -1,6 +1,18 @@
-const removeFromArray = function() {
+function removeFromArray(arr,...args) {
+    for (let i = 0; i <= arr.length -1 ; i ++) {                  //loop arr
 
-};
+        for (let j = 0; j<= args.length -1; j++){                 //loop args
+            if (arr[i] === args[j]) {                             //check for similarities
+                
+                let one = arr.indexOf(args[j]);                   //find index 
+                //console.log(one);
+                arr.splice(one,1);                                //actual arguments
+            }
+        }
+}
+return arr;
+} ; removeFromArray([1, 2, 3, 4], 3, 2);
+//took me about 5 hours//
 
 // Do not edit below this line
 module.exports = removeFromArray;
@@ -15,32 +27,21 @@ module.exports = removeFromArray;
  * 3. remove from array list
  */
 
- const removeFromArray2= function(arr , ...args) {
-
-};
-
-
-if arg == arr {
-    Array.splice(arr[i], 1 )
-}
 
 // get index number of args and store in i
 // args is an array
 
-arr = [1,2,3,4,5];
-args = 3;
-
-arr.splice(/**index number for arr */,/**args.length */)
+//rr.splice(/**index number for arr */,/**args.length */)
 
 //check if args == arr , get index number
 
-
-    //first scenario
-arr = [1,2,3,4,5];
-args = [ 3 ];
- 1. loop through args;
- 2. if its a Number, store in a var , get index num in arr
- 3. if its !Number return arr 
+/** 
+//first scenario
+arr = [1, 2, 3, 4, 5];
+args = [3];
+1. loop through args;
+2. if its a Number, store in a var , get index num in arr
+3. if its!Number return arr 
 
 
     //second scenario
@@ -72,7 +73,7 @@ for (let i = 0; i <= arr.length -1 ; i ++) {
     arr.splice(another[i] , 1);
  } ; console.log(arr);
  
- arr.splice(/**index number for arr */,/**args.length */)
+ arr.splice(/**index number for arr *//**args.length 
 
 
 
@@ -87,6 +88,7 @@ for (let i = 0; i <= arr.length -1 ; i ++) {
 
 
  //notes : maybe its better if index is obtained AFTER splice  :)
+
 
  arr = [1,22, "three" , "five"];
 
@@ -123,3 +125,4 @@ ind;
 
 
 
+**/
