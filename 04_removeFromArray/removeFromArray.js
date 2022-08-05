@@ -1,17 +1,20 @@
-function removeFromArray(arr,...args) {
-    for (let i = 0; i <= arr.length -1 ; i ++) {                  //loop arr
 
-        for (let j = 0; j<= args.length -1; j++){                 //loop args
-            if (arr[i] === args[j]) {                             //check for similarities
-                
-                let one = arr.indexOf(args[j]);                   //find index 
-                //console.log(one);
-                arr.splice(one,1);                                //actual arguments
-            }
+const removeFromArray = function(...args) {
+    const arr = args[0];
+    const newArray = [];
+
+    arr.forEach((item) => {
+        if (!args.includes(item)) {
+            newArray.push(item);
         }
+    });
+    return newArray;
 }
-return arr;
-} ; removeFromArray([1, 2, 3, 4], 3, 2);
+    
+//problem with the code is that it doesn't work if the args are not in order
+// theres holes in the array?
+
+
 //took me about 5 hours//
 
 // Do not edit below this line
